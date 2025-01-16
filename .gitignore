@@ -1,0 +1,12 @@
+.idea
+.env
+.test/
+config
+composer.lock
+vendor
+Documentation-*
+.phpdoc
+node_modules
+.php-cs-fixer.cache
+php-cs-fixer.xml
+phpstan.xml

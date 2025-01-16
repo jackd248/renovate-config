@@ -1,0 +1,39 @@
+{
+	"name": "kmi/renovate-config",
+	"description": "Description",
+	"license": "GPL-2.0-or-later",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Konrad Michalik",
+			"email": "hello@konradmichalik.dev",
+			"homepage": "https://konradmichalik.dev",
+			"role": "Developer"
+		}
+	],
+	"require-dev": {
+		"armin/editorconfig-cli": "^2.0",
+		"ergebnis/composer-normalize": "^2.44"
+	},
+	"config": {
+		"allow-plugins": {
+			"ergebnis/composer-normalize": true
+		},
+		"lock": false
+	},
+	"extra": {
+		"typo3/cms": {
+			"custom-extension-key": "custom_extension_key"
+		}
+	},
+	"scripts": {
+		"check": [
+			"@composer:normalize:check",
+			"@editorconfig:lint:check"
+		],
+		"composer:normalize": "@composer normalize --no-check-lock",
+		"composer:normalize:check": "@composer normalize --no-check-lock --dry-run",
+		"editorconfig:lint": "ec --strict --fix --git-only -n",
+		"editorconfig:lint:check": "ec --strict --git-only -n"
+	}
+}
