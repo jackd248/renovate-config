@@ -1,13 +1,22 @@
+<div align="center">
+
 # Renovate config
 
-This repository contains my personal [renovate](https://docs.renovatebot.com/) configuration used as base for my projects.
+[![CGL](https://github.com/jackd248/renovate-config/actions/workflows/cgl.yaml/badge.svg)](https://github.com/jackd248/renovate-config/actions/workflows/cgl.yaml)
+[![Release](https://github.com/jackd248/renovate-config/actions/workflows/release.yaml/badge.svg)](https://github.com/jackd248/renovate-config/actions/workflows/release.yaml)
+[![License](https://img.shields.io/github/license/jackd248/renovate-config)](LICENSE)
 
-## Presets
+</div>
+
+This repository contains my personal [renovate](https://docs.renovatebot.com/) configuration used as base for my projects. It is not meant to be used anywhere else.
+
+## 🗂️ Presets
 
 - `default.json` - Default configuration for all projects
-- `typo3-extension.json` - Configuration for TYPO3 extension projects
+- `typo3-extension.json` - Configuration for TYPO3 extensions
+- `typo3-projects.json` - Configuration for TYPO3 projects
 
-## Usage
+## ⚡ Usage
 
 ```json
 {
@@ -17,3 +26,7 @@ This repository contains my personal [renovate](https://docs.renovatebot.com/) c
     ]
 }
 ```
+
+## ⭐ License
+
+This project is licensed under [GNU General Public License 3.0 (or later)](LICENSE).
