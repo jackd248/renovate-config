@@ -1,14 +1,14 @@
 {
-	"name": "kmi/renovate-config",
-	"description": "Description",
-	"license": "GPL-2.0-or-later",
+	"name": "konradmichalik/renovate-config",
+	"description": "My personal Renovate configuration.",
+	"license": "GPL-3.0-or-later",
 	"type": "library",
 	"authors": [
 		{
 			"name": "Konrad Michalik",
-			"email": "hello@konradmichalik.dev",
+			"email": "hej@konradmichalik.dev",
 			"homepage": "https://konradmichalik.dev",
-			"role": "Developer"
+			"role": "Maintainer"
 		}
 	],
 	"require-dev": {
@@ -21,19 +21,15 @@
 		},
 		"lock": false
 	},
-	"extra": {
-		"typo3/cms": {
-			"custom-extension-key": "custom_extension_key"
-		}
-	},
 	"scripts": {
-		"check": [
-			"@composer:normalize:check",
-			"@editorconfig:lint:check"
+		"lint": [
+			"@lint:composer:fix",
+			"@lint:editorconfig:fix"
 		],
-		"composer:normalize": "@composer normalize --no-check-lock",
-		"composer:normalize:check": "@composer normalize --no-check-lock --dry-run",
-		"editorconfig:lint": "ec --strict --fix --git-only -n",
-		"editorconfig:lint:check": "ec --strict --git-only -n"
+		"lint:composer": "@lint:composer:fix --dry-run",
+		"lint:composer:fix": "@composer normalize",
+		"lint:editorconfig": "ec",
+		"lint:editorconfig:fix": "@lint:editorconfig --fix",
+		"validate-config": "docker compose run --rm validate"
 	}
 }
