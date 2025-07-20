@@ -2,8 +2,8 @@
 
 # Renovate config
 
-[![CGL](https://github.com/jackd248/renovate-config/actions/workflows/cgl.yaml/badge.svg)](https://github.com/jackd248/renovate-config/actions/workflows/cgl.yaml)
-[![Release](https://github.com/jackd248/renovate-config/actions/workflows/release.yaml/badge.svg)](https://github.com/jackd248/renovate-config/actions/workflows/release.yaml)
+[![CGL](https://github.com/jackd248/renovate-config/actions/workflows/cgl.yml/badge.svg)](https://github.com/jackd248/renovate-config/actions/workflows/cgl.yml)
+[![Release](https://github.com/jackd248/renovate-config/actions/workflows/release.yml/badge.svg)](https://github.com/jackd248/renovate-config/actions/workflows/release.yml)
 [![License](https://img.shields.io/github/license/jackd248/renovate-config)](LICENSE)
 
 </div>
