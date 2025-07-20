@@ -1,34 +1,36 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "composerIgnorePlatformReqs": [
-	"ext-intl"
-  ],
-  "packageRules": [
-	{
-	  "description": "Widen all production dependencies",
-	  "matchDepTypes": [
-		"require"
-	  ],
-	  "rangeStrategy": "widen"
-	},
-	{
-	  "groupName": "typo3 packages",
-	  "groupSlug": "typo3",
-	  "matchDatasources": [
-		"packagist"
-	  ],
-	  "matchPackagePatterns": [
-		"typo3/cms-"
-	  ]
-	},
-	{
-	  "description": "Disable Renovate for all fixture extensions used in functional tests",
-	  "extends": [
-		":disableRenovate"
-	  ],
-	  "matchFileNames": [
-		"Tests/Functional/Fixtures/Extensions/**"
-	  ]
-	}
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"composerIgnorePlatformReqs": [
+		"ext-intl"
+	],
+	"packageRules": [
+		{
+			"description": "Widen all production dependencies",
+			"matchDepTypes": [
+				"require"
+			],
+			"rangeStrategy": "widen"
+		},
+		{
+			"groupName": "TYPO3 CMS",
+			"groupSlug": "typo3",
+			"matchDatasources": [
+				"packagist"
+			],
+			"matchPackageNames": [
+				"typo3/cms-**",
+				"!typo3/cms-cli",
+				"!typo3/cms-composer-installers"
+			]
+		},
+		{
+			"description": "Disable Renovate for all fixture extensions used in functional tests",
+			"extends": [
+				":disableRenovate"
+			],
+			"matchFileNames": [
+				"Tests/Functional/Fixtures/Extensions/**"
+			]
+		}
+	]
 }
