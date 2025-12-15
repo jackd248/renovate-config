@@ -1,6 +1,6 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
+"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+"extends": [
 	":automergeBranch",
 	":automergeMinor",
 	":combinePatchMinorReleases",
@@ -12,22 +12,22 @@
 	":separateMajorReleases",
 	"group:recommended",
 	"schedule:nonOfficeHours"
-  ],
-  "timezone": "Europe/Berlin",
-  "assignees": [
+],
+"timezone": "Europe/Berlin",
+"assignees": [
 	"jackd248"
-  ],
-  "commitBodyTable": true,
-  "composerIgnorePlatformReqs": null,
-  "configMigration": true,
-  "lockFileMaintenance": {
+],
+"commitBodyTable": true,
+"composerIgnorePlatformReqs": null,
+"configMigration": true,
+"lockFileMaintenance": {
 	"enabled": true,
 	"extends": [
 	  "schedule:daily"
 	],
 	"commitMessageAction": "Update all dependencies"
-  },
-  "packageRules": [
+},
+"packageRules": [
 	{
 	  "description": "Handle PHP requirement specifically",
 	  "extends": [
@@ -45,13 +45,13 @@
 		"npm"
 	  ]
 	}
-  ],
-  "platformAutomerge": true,
-  "vulnerabilityAlerts": {
+],
+"platformAutomerge": true,
+"vulnerabilityAlerts": {
 	"extends": [
 	  ":automergeDisabled",
 	  ":automergePr"
 	],
 	"rangeStrategy": "replace"
-  }
+}
 }
