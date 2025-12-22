@@ -1,10 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"composerIgnorePlatformReqs": [
-		"ext-intl",
-		"ext-sodium",
-		"php"
-	],
+	"composerIgnorePlatformReqs": ["ext-*", "lib-*", "php"],
 	"lockFileMaintenance": {
 		"automerge": false,
 		"extends": [
